@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.ProvinceDao">
+	<select id="getById" parameterType="int" resultType="beans.Province">
+		select * from province where id = #{id}
+	</select>
+
+	<insert id="save" parameterType="beans.Province">
+		insert into
+		province(id,name,jiancheng,shenghui)
+		values(#{id},#{name},#{jiancheng},#{shenghui})
+	</insert>
+	
+	<select id="getAll" resultType="beans.Province">
+		select * from province
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
